@@ -1,6 +1,8 @@
 package llamada_metodo;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -10,11 +12,7 @@ import org.junit.Test;
 
 public class ContenedorTest {
 
-	int primero=1;
-	int segundo=2;
-	private Contenedor C1;
-	
-	@BeforeClass
+		@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}
 
@@ -32,7 +30,12 @@ public class ContenedorTest {
 
 	@Test
 	public void test() {
-		assertEquals(false,C1.metodo1(primero, segundo));		fail("Not yet implemented");
+		Contenedor C1=new Contenedor();
+		boolean C2=C1.metodo1(1, 2);
+		assertFalse(C2);
+		
+		System.out.println("Resultado " + C2);
+		
 	}
 
 }
